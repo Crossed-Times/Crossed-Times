@@ -5,6 +5,8 @@
 #include <iostream>
 #include <fstream>
 #include <cstring>
+#include <CEGUI.h>
+#include <RendererModules\Ogre\CEGUIOgreRenderer.h>
 
 class Window{
 	public:
@@ -20,6 +22,9 @@ class Window{
 		Ogre::Camera *cam;
 		Ogre::Viewport *view;
 		std::string* separate(std::string el);
+	protected:
+		CEGUI::OgreRenderer *cRenderer;
+		void gui(void);
 };
 
 #endif
